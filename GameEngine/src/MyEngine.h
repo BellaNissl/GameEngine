@@ -1,6 +1,6 @@
 #pragma once
 
-// For use by My Engine Application
+// For use by MyEngine Application
 #include <stdio.h>
 #include "MyEngine/Application.h"
 #include "MyEngine/Log.h"

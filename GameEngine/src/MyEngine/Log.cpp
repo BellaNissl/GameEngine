@@ -5,6 +5,7 @@ namespace MyEngine {
 	std::shared_ptr<spdlog::logger> Log::s_CoreLogger;
 	std::shared_ptr<spdlog::logger> Log::s_ClientLogger;
 
+	// initializing the loggers and setting the output pattern
 	void Log::Init() {
 		//%T timestamp %n name %v%$ message
 		spdlog::set_pattern("%^[%T] %n: %v%$");
