@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="External">
+      <UniqueIdentifier>{089DB854-F469-1360-1D83-010809AF48EE}</UniqueIdentifier>
+    </Filter>
     <Filter Include="MyEngine">
       <UniqueIdentifier>{01CCBB96-ED98-16A2-16B2-044A02DE4B30}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MyEngine\Events">
+      <UniqueIdentifier>{C5CCB583-3158-2348-3A69-A63CA6737F48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\EnginePch.h" />
+    <ClInclude Include="src\External\PathAPI.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="src\External\Vector.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="src\External\Vector2.h">
+      <Filter>External</Filter>
+    </ClInclude>
     <ClInclude Include="src\MyEngine.h" />
     <ClInclude Include="src\MyEngine\Application.h">
       <Filter>MyEngine</Filter>
@@ -16,16 +38,38 @@
     <ClInclude Include="src\MyEngine\EntryPoint.h">
       <Filter>MyEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\MyEngine\Events\ApplicationEvent.h">
+      <Filter>MyEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MyEngine\Events\Event.h">
+      <Filter>MyEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MyEngine\Events\KeyEvent.h">
+      <Filter>MyEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MyEngine\Events\MouseEvent.h">
+      <Filter>MyEngine\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\MyEngine\Log.h">
       <Filter>MyEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\MyEngine\Window.h">
+      <Filter>MyEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\EnginePch.cpp" />
     <ClCompile Include="src\MyEngine\Application.cpp">
       <Filter>MyEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\MyEngine\Log.cpp">
       <Filter>MyEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
