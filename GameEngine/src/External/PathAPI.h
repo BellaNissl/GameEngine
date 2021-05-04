@@ -6,7 +6,7 @@ namespace PathAPI {
 	/*
 	*  This struct are the tiles the map consists of
 	*/
-	struct Tile {
+	struct MY_ENGINE_API Tile {
 		/*
 		*  The upper left position of the tile
 		*/
@@ -26,7 +26,7 @@ namespace PathAPI {
 	/*
 	*  This class creates a map of tiles
 	*/
-	class Map {
+	class MY_ENGINE_API Map {
 	public:
 		/*
 		*  Creates a Map with the info read from a string
@@ -136,7 +136,7 @@ namespace PathAPI {
 	/*
 	*  This class handles the pathfinding
 	*/
-	class Path {
+	class MY_ENGINE_API Path {
 	public:
 		/* 
 		*  Creates the path

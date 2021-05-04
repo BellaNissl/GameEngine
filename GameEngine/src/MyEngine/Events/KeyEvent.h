@@ -6,7 +6,7 @@ namespace MyEngine {
 
 	// KeyEvent base class that contains a key code
 	// should not be able to create an object of this class -> protected constructor
-	class KeyEvent : public Event {
+	class MY_ENGINE_API KeyEvent : public Event {
 	public:
 		inline int GetKeyCode() const { return m_KeyCode; }
 
@@ -19,7 +19,7 @@ namespace MyEngine {
 	};
 
 
-	class KeyPressedEvent : public KeyEvent {
+	class MY_ENGINE_API KeyPressedEvent : public KeyEvent {
 	public:
 		// differentiate between key pressed event and key being pressed and held with the repeatCount
 		KeyPressedEvent(int keycode, int repeatCount)
@@ -41,7 +41,7 @@ namespace MyEngine {
 	};
 
 
-	class KeyReleasedEvent : public KeyEvent {
+	class MY_ENGINE_API KeyReleasedEvent : public KeyEvent {
 	public:
 		KeyReleasedEvent(int keycode)
 			: KeyEvent(keycode) {}

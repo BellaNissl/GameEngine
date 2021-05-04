@@ -4,6 +4,7 @@
 
 #include "Core.h"
 #include "Events/Event.h"
+#include "MyEngine/Events/ApplicationEvent.h"
 
 namespace MyEngine {
 

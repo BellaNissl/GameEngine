@@ -1,10 +1,25 @@
-#include "EnginePch.h"
 #include <MyEngine.h>
+
+class ExampleLayer : public MyEngine::Layer {
+public:
+	ExampleLayer()
+		: Layer("Example") {
+	}
+
+	void OnUpdate() override {
+		ENGINE_INFO("ExampleLayer::Update");
+	}
+
+	void OnEvent(MyEngine::Event& event) override {
+		ENGINE_TRACE("{0}", event);
+	}
+};
 
 class Sandbox : public MyEngine::Application {
 public:
 	Sandbox() {
-
+		PushLayer(new MyEngine::ImGuiLayer());
+		//PushLayer(new ExampleLayer());
 	}
 
 	~Sandbox() {

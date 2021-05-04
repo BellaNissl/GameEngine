@@ -4,7 +4,7 @@
 
 namespace MyEngine {
 
-	class WindowResizeEvent : public Event {
+	class MY_ENGINE_API WindowResizeEvent : public Event {
 	public:
 		WindowResizeEvent(unsigned int width, unsigned int height)
 			: m_Width(width), m_Height(height) {}
@@ -26,7 +26,7 @@ namespace MyEngine {
 	};
 
 
-	class WindowCloseEvent : public Event {
+	class MY_ENGINE_API WindowCloseEvent : public Event {
 	public:
 		WindowCloseEvent() = default;
 

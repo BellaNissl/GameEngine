@@ -2,11 +2,11 @@
 
 #include "MyEngine/Window.h"
 
-#include <GLFW/glfw3.h>
+#include "GLFW/glfw3.h"
 
 namespace MyEngine {
 
-	class WindowsWindow : public Window {
+	class MY_ENGINE_API WindowsWindow : public Window {
 	public:
 		WindowsWindow(const WindowProps& props);
 		virtual ~WindowsWindow();

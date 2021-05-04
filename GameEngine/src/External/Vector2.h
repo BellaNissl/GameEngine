@@ -1,5 +1,5 @@
 #pragma once
-class Vector2 {
+class MY_ENGINE_API Vector2 {
 public:
 	float x = 0.0f, y = 0.0f;
 

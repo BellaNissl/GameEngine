@@ -51,12 +51,12 @@ namespace MyEngine {
 		bool IsInCategory(EventCategory category) {
 			return GetCategoryFlags() & category;
 		}
-	protected:
+
 		bool m_Handled = false; // to check if an event hase been handled and we want to discard it (e. g. mouse click)
 	};
 
 
-	class EventDispatcher {
+	class MY_ENGINE_API EventDispatcher {
 		template<typename T>
 		using EventFn = std::function<bool(T&)>;
 	public:
@@ -66,9 +66,9 @@ namespace MyEngine {
 		}
 
 		template<typename T>
-		bool Dispatch(EventFn<T>& func) {
+		bool Dispatch(EventFn<T> func) {
 			if (m_Event.GetEventType() == T::GetStaticType()) { // checking which event type the event is and if it matches the template argument
-				m_Event.Handled |= func(static_cast<T&>(m_Event)); // call function with event
+				m_Event.m_Handled |= func(*(T*)&m_Event); // call function with event
 				return true;
 			}
 			return false;

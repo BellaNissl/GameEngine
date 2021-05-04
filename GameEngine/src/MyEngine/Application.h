@@ -3,6 +3,7 @@
 #include "Core.h"
 #include "Events/Event.h"
 #include "Window.h"
+#include "LayerStack.h"
 
 namespace MyEngine {
 	class MY_ENGINE_API Application {
@@ -13,9 +14,22 @@ namespace MyEngine {
 
 		void Run();
 
+		void OnEvent(Event& e);
+
+		void PushLayer(Layer* layer);
+		void PushOverlay(Layer* layer);
+
+		inline static Application& Get() { return *s_Instance;  }
+		inline Window& getWindow() { return *m_Window;  }
+
 	private:
+		bool OnWindowClose(WindowCloseEvent& e);
+
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
+		LayerStack m_LayerStack;
+
+		static Application* s_Instance;
 	};
 
 	// To be defined in a Client

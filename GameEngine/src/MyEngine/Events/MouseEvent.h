@@ -4,7 +4,7 @@
 
 namespace MyEngine {
 
-	class MouseMovedEvent : public Event {
+	class MY_ENGINE_API MouseMovedEvent : public Event {
 	public:
 		MouseMovedEvent(const float x, const float y)
 			: m_MouseX(x), m_MouseY(y) {}
@@ -28,7 +28,7 @@ namespace MyEngine {
 	};
 
 
-	class MouseScrolledEvent : public Event {
+	class MY_ENGINE_API MouseScrolledEvent : public Event {
 	public:
 		MouseScrolledEvent(const float xOffset, const float yOffset)
 			: m_XOffset(xOffset), m_YOffset(yOffset) {}
@@ -53,7 +53,7 @@ namespace MyEngine {
 
 	// MouseButtonEvent base class that contains a button code
 	// should not be able to create an object of this class -> protected constructor
-	class MouseButtonEvent : public Event {
+	class MY_ENGINE_API MouseButtonEvent : public Event {
 	public:
 		inline int GetMouseButton() const { return m_Button; }
 
@@ -66,7 +66,7 @@ namespace MyEngine {
 	};
 
 
-	class MouseButtonPressedEvent : public MouseButtonEvent {
+	class MY_ENGINE_API MouseButtonPressedEvent : public MouseButtonEvent {
 	public:
 		MouseButtonPressedEvent(int button)
 			: MouseButtonEvent(button) {}
@@ -82,7 +82,7 @@ namespace MyEngine {
 	};
 
 
-	class MouseButtonReleasedEvent : public MouseButtonEvent {
+	class MY_ENGINE_API MouseButtonReleasedEvent : public MouseButtonEvent {
 	public:
 		MouseButtonReleasedEvent(int button)
 			: MouseButtonEvent(button) {}

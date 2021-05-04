@@ -9,7 +9,7 @@
 
 
 template<typename T>
-class Vector {
+class MY_ENGINE_API Vector {
 public:
 	Vector() : m_data(nullptr), m_size(0), m_capacity(0) {
 	}
